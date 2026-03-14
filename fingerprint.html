@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fingerprint Authentication</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center; /* horizontal center */
+            align-items: center;     /* vertical center */
+            background-image: url('https://i.pinimg.com/originals/49/8e/01/498e01faaf88bee2ca08a0f2acf8c7e1.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+
+        .card {
+            padding: 0; /* no white background */
+            text-align: center;
+        }
+
+        .card h2 {
+            margin: 0 0 20px 0;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px white; /* readable on image */
+        }
+
+        .card p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px white;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 5px;
+            background-color: green; /* green button */
+            border: none;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: darkgreen;
+        }
+
+        .card img {
+            display: none; /* remove extra image, background already applied */
+        }
+    </style>
+</head>
+
+<body>
+<div class="card">
+  <h2>Fingerprint Authentication</h2>
+  <p>Verified ✔</p>
+  <a href="/vote" class="btn">Proceed</a>
+</div>
+</body>
+</html>

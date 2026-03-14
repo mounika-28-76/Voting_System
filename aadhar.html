@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aadhaar Verification</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* horizontal center */
+            align-items: center;     /* vertical center */
+            background-image: url('https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/aadhaar-verification.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: black; /* text color black */
+            text-align: center;
+        }
+
+        /* Transparent form */
+        .card {
+            padding: 0;
+            border-radius: 0;
+            text-align: center;
+        }
+
+        .card h2 {
+            color: black;
+        }
+
+        .card input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: 2px solid black; /* visible border */
+            font-size: 16px;
+            background-color: transparent; /* fully transparent */
+            color: black; /* text color black */
+            text-align: center;
+        }
+
+        .card input::placeholder {
+            color: #333; /* placeholder blackish */
+        }
+
+        .card button {
+            padding: 12px 25px;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            background-color: green;
+            color: black; /* button text black */
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .card button:hover {
+            background-color: rgba(0,0,0,0.1); /* subtle hover effect */
+        }
+
+        .card .img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<form class="card" action="/details" method="post">
+  <h2>Enter Aadhaar Number</h2>
+
+  <img src="/static/aadhar.png" class="img">
+
+  <input type="text" placeholder="XXXX-XXXX-XXXX" required>
+  <br><br>
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://wise.com/imaginary-v2/1e532c6a4fd9ca2c03ff1b267c282ef2.jpg?width=1200');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(1.5);
+            color: white;
+            text-align: center;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        h3 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        ul li {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        .start-btn {
+            background-color: green;
+            color: white;
+        }
+
+        .admin-btn {
+            background-color: #1e90ff;
+            color: white;
+        }
+
+        .logout-btn {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to Online Voting System</h1>
+
+    <h2>ONLINE VOTING SYSTEM</h2>
+
+    <h3>Voting Steps:</h3>
+    <ul>
+        <li>👉 Aadhaar Verification</li>
+        <li>👉 Voter Details Verified</li>
+        <li>👉 Face Recognition</li>
+        <li>👉 Fingerprint Authentication</li>
+        <li>👉 Select Candidate</li>
+        <li>👉 Vote Submitted</li>
+    </ul>
+
+    <div>
+        <button class="start-btn" onclick="startVoting()">Start Voting</button>
+        <button class="admin-btn" onclick="openAdmin()">Admin Dashboard</button>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+<script>
+function startVoting() {
+    window.location.href = '/aadhaar';
+}
+
+function openAdmin() {
+    // ✅ GO TO ADMIN LOGIN (NOT DASHBOARD)
+    window.location.href = '/admin';
+}
+
+function logout() {
+    sessionStorage.clear();
+    localStorage.clear();
+    window.location.href = '/logout';
+}
+</script>
+
+</body>
+</html>

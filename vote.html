@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Candidate</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://www.scobserver.in/wp-content/uploads/2024/03/ECI-Appointments.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: black;
+        }
+
+        .card {
+            text-align: center;
+            /* background removed for transparency */
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .card h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px #333;
+        }
+
+        .card input[type="radio"] {
+            margin: 15px 0;
+            transform: scale(1.5);
+        }
+
+        .card label {
+            font-size: 28px;
+            margin-left: 10px;
+            text-shadow: 1px 1px 2px #333;
+        }
+
+        .card button {
+            margin-top: 30px;
+            padding: 16px 35px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+<form class="card" action="/submit_vote" method="post">
+    <h2>Select Candidate</h2>
+
+    {% for c in candidates %}
+        <input type="radio" name="candidate_id" value="{{ c.id }}" required>
+        <label>{{ c.name }} ({{ c.party }})</label><br>
+    {% endfor %}
+
+    <button type="submit">Submit Vote</button>
+</form>
+
+</body>
+</html>

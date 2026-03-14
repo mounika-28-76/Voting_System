@@ -15,10 +15,14 @@
             background-image: url('https://wise.com/imaginary-v2/1e532c6a4fd9ca2c03ff1b267c282ef2.jpg?width=1200');
             background-size: cover;
             background-position: center;
-            filter: brightness(1.5);
             color: white;
             text-align: center;
             text-shadow: 1px 1px 2px black;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
         }
 
         h2 {
@@ -66,6 +70,20 @@
             background-color: red;
             color: white;
         }
+
+        .github-btn {
+            background-color: black;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .github-btn:hover {
+            background-color: #333;
+        }
+
     </style>
 </head>
 
@@ -76,6 +94,7 @@
     <h2>ONLINE VOTING SYSTEM</h2>
 
     <h3>Voting Steps:</h3>
+
     <ul>
         <li>👉 Aadhaar Verification</li>
         <li>👉 Voter Details Verified</li>
@@ -91,13 +110,20 @@
         <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
 
+    <br>
+
+    <!-- GitHub Project Link -->
+    <a href="https://github.com/yourusername/online-voting-system" target="_blank" class="github-btn">
+        View Project on GitHub
+    </a>
+
 <script>
+
 function startVoting() {
     window.location.href = '/aadhaar';
 }
 
 function openAdmin() {
-    // ✅ GO TO ADMIN LOGIN (NOT DASHBOARD)
     window.location.href = '/admin';
 }
 
@@ -106,6 +132,7 @@ function logout() {
     localStorage.clear();
     window.location.href = '/logout';
 }
+
 </script>
 
 </body>
